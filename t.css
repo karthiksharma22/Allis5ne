@@ -1,0 +1,115 @@
+.wrap {
+    height: 130px;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.957);
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+body {
+    background-image: url(https://images.pexels.com/photos/7130537/pexels-photo-7130537.jpeg?auto=compress&cs=tinysrgb&w=1600);
+    height: 120vh;
+    backface-visibility: calc(39%);
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    padding: 3vw;
+}
+
+h1 {
+    color: #151724;
+    font-weight: 600;
+    text-align: center;
+    font-size: 6vw;
+    margin-bottom: 3vw;
+}
+
+.one {
+    font-size: 1.6vw;
+    background: #151724;
+    width: 60vw;
+    padding: 2vw;
+    line-height: 3vw;
+    border-radius: 2vw;
+    display: flex;
+    color: #FCEFE9;
+    align-items: center;
+
+}
+
+.two {
+    padding: 2vw;
+    width: 30vw;
+    height: 20vw;
+    overflow: hidden;
+}
+
+img {
+    border-radius: 20px;
+    max-width: 100%;
+    height: 16vw;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.831);
+}
+
+
+.container {
+    display: flex;
+    margin-top: 7vw;
+    text-align: center;
+    justify-content: space-around;
+}
+
+@media (max-width:700px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .one {
+        font-size: 20px;
+        background: #151724;
+        width: 90vw;
+        padding: 3vw;
+        line-height: 150%;
+        border-radius: 2vw;
+        display: flex;
+        color: #FCEFE9;
+        align-items: center;
+        height:auto;
+        font-weight: 300;
+        height:45vw;
+        overflow: hidden;
+    }
+
+    .two {
+        padding: 2px;
+        width: 300px;
+        height: 200px;
+        overflow: hidden;
+        margin:20px;
+    }
+   
+    img {
+        border-radius: 25px;
+        width: 300px;
+        height: 200px;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.831);
+    }
+
+    h1 {
+        color: #151724;
+        font-weight: 600;
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 3vw;
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Allis5ne | Test</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Allis5ne | Tests</title>
+        <link rel="stylesheet" href="test.css" />
+        <link rel="stylesheet" href="test2.css" />
+      </head>
+
+      <body style="overflow: hidden">
+        <img src="testbg.png" alt="" class="bg" />
+        <h1 class="mainhead" style="font-size: 40px; margin-top: 70px">
+          Pick a Module and answer the questions for Screening
+        </h1>
+        <div class="container">
+          <a href="testd.html" style="text-decoration: none">
+            <div class="card wallet1">
+              <div class="overlay"></div>
+              <div class="circle">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/6186/6186464.png"
+                  class="icon"
+                />
+              </div>
+              <p style="text-align: center">Module 1 - Depression</p>
+            </div>
+          </a>
+
+          <a href="tests.html" style="text-decoration: none">
+            <div class="card wallet2">
+              <div class="overlay"></div>
+              <div class="circle">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/10835/10835256.png"
+                  class="icon"
+                />
+              </div>
+              <p style="text-align: center">
+                Module 2 - <br />
+                Stress
+              </p>
+            </div>
+          </a>
+
+          <a href="testa.html" style="text-decoration: none">
+            <div class="card wallet3">
+              <div class="overlay"></div>
+              <div class="circle">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/4897/4897268.png"
+                  class="icon"
+                />
+              </div>
+              <p style="text-align: center">
+                Module 3 - <br />
+                Anxiety
+              </p>
+            </div>
+          </a>
+        </div>
+        <button class="btn" onclick="redirect()">Go to DashBoard</button>
+        <script>
+          let redirect = () => {
+            location.replace("dashboard.html");
+          };
+        </script>
+      </body>
+    </html>
+  </body>
+</html>

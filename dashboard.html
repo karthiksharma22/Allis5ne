@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="dash.css" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"
+      integrity="sha512-6kvhZ/39gRVLmoM/6JxbbJVTYzL/gnbDVsHACLx/31IREU4l3sI7yeO0d4gw8xU5Mpmm/17LMaDHOCf+TvuC2Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Allis5ine | Dashboard</title>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Task", "Hours per Day"],
+          ["Depression", localStorage.getItem("depscore") / 42],
+          ["Anxiety", localStorage.getItem("anxietyscore") / 42],
+          ["Stress", localStorage.getItem("stressscore") / 42],
+        ]);
+
+        var options = {
+          title: "My Daily Activities",
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(
+          document.getElementById("donutchart")
+        );
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="cont">Personalized Dashboard</div>
+      <div class="wrapper">
+        <div class="card">
+          <div class="circle">
+            <div class="bar"></div>
+            <div class="box"><span></span></div>
+          </div>
+          <div class="text">Depression</div>
+        </div>
+        <div class="card anx">
+          <div class="circle">
+            <div class="bar"></div>
+            <div class="box"><span></span></div>
+          </div>
+          <div class="text">Anxiety</div>
+        </div>
+        <div class="card stre">
+          <div class="circle">
+            <div class="bar"></div>
+            <div class="box"><span></span></div>
+          </div>
+          <div class="text">Stress</div>
+        </div>
+      </div>
+      <div
+        id="donutchart"
+        style="
+          width: 800px;
+          height: 300px;
+          margin-top: 30px;
+          border-radius: 10px;
+        "
+      ></div>
+      <button class="btn">Reset Score</button>
+    </div>
+    <script>
+      let set = document.getElementsByClassName("text");
+      set[0].innerHTML = `<p>Depression <br> ${localStorage.getItem(
+        "depressionstatus"
+      )}</p>`;
+      let btn = document.getElementsByClassName("btn")[0];
+      btn.addEventListener("click", () => {
+        localStorage.clear();
+        location.reload();
+      });
+      set[1].innerHTML = `<p>Anxiety <br> ${localStorage.getItem(
+        "anxietystatus"
+      )}</p>`;
+      set[2].innerHTML = `<p>Stress <br> ${localStorage.getItem(
+        "stressstatus"
+      )}</p>`;
+      let options = {
+        startAngle: -1.55,
+        size: 150,
+        value: localStorage.getItem("depscore") / 42,
+        fill: { color: "red" },
+      };
+      $(".circle .bar")
+        .circleProgress(options)
+        .on("circle-animation-progress", function (event, progress, stepValue) {
+          $(this)
+            .parent()
+            .find("span")
+            .text(String(stepValue.toFixed(2).substr(2)) + "%");
+        });
+      $(".anx .bar").circleProgress({
+        value: localStorage.getItem("anxietyscore") / 42,
+      });
+      $(".stre .bar").circleProgress({
+        value: localStorage.getItem("stressscore") / 42,
+      });
+    </script>
+  </body>
+</html>

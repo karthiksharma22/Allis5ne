@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Kanit:wght@500;600&family=Lobster&family=Montserrat:wght@400;500;700&family=Poppins:wght@600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #e9dbdb;
+    overflow-x: hidden;
+}
+
+.bg {
+    height: 100%;
+    width: 70vw;
+    position: absolute;
+    left: calc(35%);
+    z-index: -1;
+}
+
+.mainhead {
+    font-family: 'Poppins', sans-serif;
+    font-size: 6vw;
+    position: absolute;
+    top: calc(32%);
+    width: 40vw;
+    text-align: right;
+    left: calc(-7%);
+    line-height: 100%;
+    color: #4b5263;
+    /* text-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.87); */
+}
+
+.mainhead2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13.5vw;
+    position: absolute;
+    top: calc(24%);
+    left: calc(36.5%);
+    letter-spacing: -8px;
+    -webkit-text-stroke: 5px #2f4654;
+    color: rgba(255, 255, 255, 0);
+}
+
+
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+
+.cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+}
+
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+    width: 100%;
+    background: #b1dae7;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active {
+    transform: scale(0.95);
+}
+
+.pos2 {
+    position: absolute;
+    left: calc(12.5%);
+    top: calc(73%);
+}
+
+
+
+.smedia {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 20px;
+    position: absolute;
+    top: calc(94%);
+    left: calc(12.7%);
+}
+
+.media {
+    height: 30px;
+    width: 30px;
+}
+
+#section2 {
+    height: 300vh;
+    width: 100%;
+    position: absolute;
+    top: 100vh;
+    background-color: white;
+    
+}
+
+.head1 {
+    font-size: 3.5vw;
+    color: #2a3840;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin: 5.5vw;
+    font-weight: 600;
+}
+
+.para {
+    font-size: 22px;
+    color: #2f4654;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin: 3vw;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8.7vw;
+    margin-bottom: 4vw;
+}
+
+.i{
+    height:16vw;
+    width:17vw;
+    margin-top: 2.8vw;
+    transition: all 0.5s;
+    
+}
+.i:hover{
+    height:20vw;
+    width:21vw;
+}
+
+.i2 {
+    height: 16vw;
+    width: 15vw;
+    margin-top: 4vw;
+    /* background-color: #e9dbdb; */
+    transition: all 0.5s;
+}
+
+.i2:hover{
+    height: 20vw;
+    width: 19vw;
+}
+
+.nandu {
+    padding: 1.3em 3em;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .nandu:hover {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  .nandu:active {
+    transform: translateY(-1px);
+  }
+
+  .align{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:7vw;
+  }
+  .test{
+    height:32vw;
+    width:60vw;
+  }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login1.css">
+    <link rel="stylesheet" href="nav.css">
+    <title>Allis5ne</title>
+</head>
+<body class="back">
+    
+    
+    <div class="main">  	
+        <input type="checkbox" id="chk" aria-hidden="true">
+    
+            <div class="login">
+                <form class="form">
+                    <label for="chk" aria-hidden="true">Log in</label>
+                    <input class="input" type="email" name="email" placeholder="Email" required="">
+                    <input class="input" type="password" name="pswd" placeholder="Password" required="">
+                    <button onclick="add()">Log in</button>
+                </form>
+            </div>
+    
+      <div class="register">
+                <form class="form">
+                    <label for="chk" aria-hidden="true">Register</label>
+                    <input class="input a" type="text" name="txt" placeholder="Username" required="">
+                    <input class="input a" type="email" name="email" placeholder="Email" required="">
+                    <input class="input a" type="password" name="pswd" placeholder="Password" required="">
+                    <button onclick="add2()">Register</button>
+                </form>
+            </div>
+    </div>
+    <script src="db.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
